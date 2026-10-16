@@ -1,0 +1,58 @@
+.benefits {
+  background: var(--color-light);
+}
+
+.benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.benefits__card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  border: 1px solid rgba(3, 3, 1, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.benefits__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(17, 157, 164, 0.18);
+  border-color: var(--color-teal);
+}
+
+.benefits__icon {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--color-teal), var(--color-blue));
+  margin-bottom: 20px;
+}
+
+.benefits__card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.benefits__card p {
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+@media (max-width: 960px) {
+  .benefits__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 620px) {
+  .benefits__grid {
+    grid-template-columns: 1fr;
+  }
+  .section {
+    padding: 72px 0;
+  }
+}

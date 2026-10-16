@@ -1,0 +1,49 @@
+.prefooter {
+  background: var(--color-blue);
+  color: var(--color-white);
+  padding: 72px 0;
+}
+
+.prefooter__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.prefooter__text h2 {
+  font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+  margin-bottom: 10px;
+}
+
+.prefooter__text p {
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+.prefooter__slot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: flex-end;
+}
+
+/* Estilos de ayuda por si añades un formulario simple */
+.prefooter__slot input {
+  flex: 1;
+  min-width: 220px;
+  padding: 14px 20px;
+  border-radius: 999px;
+  border: none;
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+}
+
+@media (max-width: 860px) {
+  .prefooter__inner {
+    grid-template-columns: 1fr;
+  }
+  .prefooter__slot {
+    justify-content: flex-start;
+  }
+}

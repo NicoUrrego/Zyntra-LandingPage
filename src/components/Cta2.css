@@ -1,0 +1,57 @@
+.cta2 {
+  padding: 110px 0;
+  background: var(--color-green);
+  color: var(--color-black);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta2::before,
+.cta2::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: var(--color-teal);
+  opacity: 0.25;
+  filter: blur(60px);
+}
+.cta2::before {
+  width: 320px;
+  height: 320px;
+  left: -100px;
+  top: -120px;
+}
+.cta2::after {
+  width: 260px;
+  height: 260px;
+  right: -80px;
+  bottom: -100px;
+}
+
+.cta2__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+}
+
+.cta2__inner h2 {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  margin-bottom: 16px;
+}
+
+.cta2__inner p {
+  font-weight: 400;
+  font-size: 1.15rem;
+  margin-bottom: 34px;
+  opacity: 0.85;
+}
+
+.cta2__slot {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+/* En este fondo verde el botón recomendado es .btn--dark */
