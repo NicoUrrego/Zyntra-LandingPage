@@ -25,7 +25,7 @@ export default function App() {
       <Header
         action={
           // EJEMPLO: enlace a WhatsApp, Calendly, formulario externo, etc.
-          <a className="btn btn--primary" href="#contacto">
+          <a href="https://v2j9f.share.hsforms.com/20MHJzMYMSouGtD9-GUZ-DA" className="btn btn--primary">
             Contáctanos
           </a>
         }
