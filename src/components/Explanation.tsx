@@ -3,7 +3,9 @@ import Media from './Placeholder'
 import './Explanation.css'
 
 export default function Explanation() {
+
   const { explanation } = content
+  
   return (
     <section id="explicacion" className="section explanation">
       <div className="container">
@@ -22,7 +24,9 @@ export default function Explanation() {
                 <p>{step.text}</p>
               </div>
               <div className="explanation__media">
-                <Media src={step.image} alt={step.title} label={`Imagen paso ${i + 1}`} />
+                <Media src={step.image} 
+                      alt={step.title} 
+                      label={`Imagen paso ${i + 1}`} />
               </div>
             </div>
           ))}
