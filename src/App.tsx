@@ -35,7 +35,7 @@ export default function App() {
         <Hero
           actions={
             <>
-              <a className="btn btn--primary" href="#contacto">
+              <a href = "https://v2j9f.share.hsforms.com/20MHJzMYMSouGtD9-GUZ-DA" className="btn btn--primary" href="#contacto">
                 Iniciar Exploración
               </a>
               <a className="btn btn--secondary" href="#explicacion">
@@ -49,7 +49,7 @@ export default function App() {
 
         {/* CTA 1 */}
         <Cta>
-          <a className="btn btn--primary" href="#contacto">
+          <a href = "https://v2j9f.share.hsforms.com/20MHJzMYMSouGtD9-GUZ-DA" className="btn btn--primary">
             Quiero empezar
           </a>
         </Cta>
@@ -59,7 +59,7 @@ export default function App() {
 
         {/* CTA 2 */}
         <Cta2>
-          <a className="btn btn--dark" href="#contacto">
+          <a href = "https://v2j9f.share.hsforms.com/20MHJzMYMSouGtD9-GUZ-DA"className="btn btn--dark" href="#contacto">
             Solicitar información
           </a>
         </Cta2>
@@ -68,7 +68,7 @@ export default function App() {
 
         {/* Pre-footer: puedes poner un formulario, un enlace, etc. */}
         <PreFooter>
-          <a className="btn btn--primary" href="mailto:zyntra12@zyntra.app">
+          <a href = "https://v2j9f.share.hsforms.com/20MHJzMYMSouGtD9-GUZ-DA" className="btn btn--primary" href="mailto:zyntra12@zyntra.app">
             Escríbenos
           </a>
         </PreFooter>
