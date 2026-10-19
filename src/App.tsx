@@ -36,7 +36,7 @@ export default function App() {
           actions={
             <>
               <a className="btn btn--primary" href="#contacto">
-                Empezar ahora
+                Iniciar Exploración
               </a>
               <a className="btn btn--secondary" href="#explicacion">
                 Ver cómo funciona
@@ -68,7 +68,7 @@ export default function App() {
 
         {/* Pre-footer: puedes poner un formulario, un enlace, etc. */}
         <PreFooter>
-          <a className="btn btn--primary" href="mailto:correo@tudominio.com">
+          <a className="btn btn--primary" href="mailto:zyntra12@zyntra.app">
             Escríbenos
           </a>
         </PreFooter>
