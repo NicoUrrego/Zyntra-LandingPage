@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { ReactNode } from 'react'
 import { content } from '../content'
 import './Header.css'
@@ -11,6 +11,7 @@ interface Props {
 export default function Header({ action }: Props) {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const menuButton = useRef<HTMLButtonElement>(null)
   const { brand, header } = content
 
   useEffect(() => {
@@ -21,13 +22,39 @@ export default function Header({ action }: Props) {
   }, [])
 
   return (
-    <header className={`header ${scrolled ? 'header--scrolled' : ''}`}>
+    <header
+      className={`header ${scrolled ? 'header--scrolled' : ''}`}
+      onKeyDown={(event) => {
+        if (event.key === 'Escape' && open) {
+          setOpen(false)
+          menuButton.current?.focus()
+        }
+      }}
+    >
       <div className="container header__inner">
-        <a href="#inicio" className="header__logo">
+        <a href="#inicio" className="header__logo" onClick={() => setOpen(false)}>
           {brand.logo ? <img src={brand.logo} alt={brand.name} /> : brand.name}
         </a>
 
-        <nav className={`header__nav ${open ? 'header__nav--open' : ''}`}>
+        <button
+          ref={menuButton}
+          type="button"
+          className={`header__burger ${open ? 'header__burger--open' : ''}`}
+          onClick={() => setOpen(!open)}
+          aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
+          aria-expanded={open}
+          aria-controls="navegacion-principal"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        <nav
+          id="navegacion-principal"
+          aria-label="Navegación principal"
+          className={`header__nav ${open ? 'header__nav--open' : ''}`}
+        >
           {header.nav.map((item) => (
             <a key={item.href} href={item.href} onClick={() => setOpen(false)}>
               {item.label}
@@ -42,16 +69,6 @@ export default function Header({ action }: Props) {
           {action ?? <span className="cta-slot-placeholder">Tu CTA</span>}
         </div>
 
-        <button
-          className={`header__burger ${open ? 'header__burger--open' : ''}`}
-          onClick={() => setOpen(!open)}
-          aria-label="Abrir menú"
-          aria-expanded={open}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
       </div>
     </header>
   )

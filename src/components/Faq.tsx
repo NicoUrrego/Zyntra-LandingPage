@@ -21,14 +21,16 @@ export default function Faq() {
             return (
               <div key={i} className={`faq__item ${isOpen ? 'faq__item--open' : ''}`}>
                 <button
+                  type="button"
                   className="faq__question"
                   onClick={() => setOpenIndex(isOpen ? null : i)}
                   aria-expanded={isOpen}
+                  aria-controls={`respuesta-faq-${i}`}
                 >
                   <span>{item.q}</span>
                   <i aria-hidden="true">+</i>
                 </button>
-                <div className="faq__answer">
+                <div id={`respuesta-faq-${i}`} className="faq__answer" aria-hidden={!isOpen}>
                   <p>{item.a}</p>
                 </div>
               </div>

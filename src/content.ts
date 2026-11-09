@@ -1,14 +1,12 @@
-import pin from './assets/pin.jpg';
-import escarapela from './assets/escarapela.png';
-import botilito from './assets/botilito.jpg';
 export const content = {
   brand: { name: 'ZYNTRA', logo: '' },
+  contactForm: 'https://v2j9f.share.hsforms.com/20MHJzMYMSouGtD9-GUZ-DA',
 
   header: {
     nav: [
       { label: 'Inicio', href: '#inicio' },
       { label: 'Beneficios', href: '#beneficios' },
-      { label: 'Cómo funciona', href: '#explicacion' }, // Ahora lleva al Merch
+      { label: 'Merch', href: '#explicacion' },
       { label: 'Testimonios', href: '#testimonios' },
       { label: 'FAQ', href: '#faq' },
     ],
@@ -16,17 +14,17 @@ export const content = {
 
   hero: {
     badge: 'EXPLORA EL MULTIVERSO',
-    title: 'Viaja más allá de lo',
-    highlight: 'conocido',
+    title: 'Explora el multiverso de',
+    highlight: 'Rick and Morty',
     subtitle:
-      'Explora personajes, dimensiones y episodios del universo de Rick and Morty desde una experiencia móvil dinámica, interactiva y hecha para descubrir.',
-    image: '', // Aquí iría tu hero1.png
-    imageAlt: 'Interfaz de la app Zyntra en un smartphone',
+      'Descubre personajes, dimensiones y episodios con Zyntra, una app ficticia de fans del multiverso de Rick and Morty.',
+    image: './media/hero.webp',
+    imageAlt: 'Icono verde de Zyntra en la pantalla de inicio de un teléfono',
   },
 
   benefits: {
     eyebrow: '¿Por qué ZYNTRA?',
-    title: 'Tu portal al multiverso',
+    title: 'Tu portal al multiverso de Rick and Morty',
     subtitle: 'Herramientas diseñadas para curiosos, aventureros y fans de la serie.',
     items: [
       { 
@@ -69,24 +67,30 @@ export const content = {
 
 
   explanation: {
-    eyebrow: 'Merch Oficial ZYNTRA',
-    title: 'Tres artefactos para verdaderos exploradores',
+    eyebrow: 'Merch de ZYNTRA',
+    title: 'Merch para fans de Rick and Morty',
     subtitle: 'Lleva el multiverso contigo con nuestra línea exclusiva de accesorios. Diseños únicos para fans irreverentes.',
     steps: [
       {
-        title: '01. Pin "Portal Inestable"',
+        title: 'Pin "Portal Inestable"',
         text: 'Metal esmaltado que brilla en la oscuridad. El complemento perfecto para tu chaqueta o mochila. No requiere baterías, pero sí valentía.',
-        image: pin, 
+        image: './media/pin.webp',
+        width: 720,
+        height: 1090,
       },
       {
-        title: '02. Escarapela "Explorador C-137"',
+        title: 'Escarapela "Explorador C-137"',
         text: 'Tu identificación oficial del multiverso. Diseño exclusivo con acabado premium. Ideal para coleccionistas y fans de la serie.',
-        image: escarapela, 
+        image: './media/escarapela.webp',
+        width: 720,
+        height: 889,
       },
       {
-        title: '03. Botilito Térmico "Zyntra Tech"',
+        title: 'Botilito Térmico "Zyntra Tech"',
         text: 'Acero inoxidable de doble pared. Mantiene tu bebida fría (o tu alcohol) en cualquier dimensión. El compañero definitivo para tus viajes.',
-        image: botilito,
+        image: './media/botilito.webp',
+        width: 720,
+        height: 839,
       },
     ],
   },
@@ -94,7 +98,7 @@ export const content = {
     testimonials: {
     eyebrow: 'Testimonios',
     title: 'Lo que dicen los coleccionistas',
-    subtitle: 'Opiniones de exploradores que ya tienen su merch en sus manos.',
+    subtitle: 'Testimonios ficticios de personajes del multiverso.',
     items: [
       { 
         name: 'Morty S.', 
@@ -156,7 +160,7 @@ export const content = {
   },
 
   footer: {
-    description: 'ZYNTRA es una experiencia móvil inmersiva para explorar el multiverso de Rick and Morty.',
+    description: 'ZYNTRA es un proyecto universitario ficticio de fans del multiverso de Rick and Morty.',
     columns: [
       {
         title: 'Navegación',
@@ -168,25 +172,17 @@ export const content = {
         ],
       },
       {
-        title: 'Legal',
-        links: [
-          { label: 'Términos y condiciones', href: '#' },
-          { label: 'Política de privacidad', href: '#' },
-        ],
-      },
-      {
         title: 'Contacto',
         links: [
           { label: 'zyntra12@zyntra.app', href: 'mailto:zyntra12@zyntra.app' },
-          { label: '+00 000 000 0000', href: 'tel:+322456739' },
+          { label: 'Formulario de contacto', href: '#contacto' },
         ],
       },
     ],
     socials: [
       { label: 'Instagram', href: 'https://www.instagram.com/rickandmorty/' },
-      { label: 'LinkedIn', href: 'https://www.linkedin.com/' },
       { label: 'X', href: 'https://x.com/RickandMorty' },
     ],
-    copyright: `© ${new Date().getFullYear()} Zyntra. Todos los derechos reservados.`,
+    copyright: '© Zyntra. Todos los derechos reservados.',
   },
 }

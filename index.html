@@ -2,9 +2,21 @@
 <html lang="es">
 
 <head>
-  
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zyntra | Explora el multiverso de Rick and Morty</title>
+  <meta name="description" content="Explora el multiverso de Rick and Morty con Zyntra, una app ficticia de fans. Descubre personajes, episodios y dimensiones, y únete a la lista de espera." />
+  <link rel="canonical" href="https://zyntra-landing-page-sigma.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://zyntra-landing-page-sigma.vercel.app/" />
+  <meta property="og:title" content="Zyntra | Explora el multiverso de Rick and Morty" />
+  <meta property="og:description" content="Descubre personajes, episodios y dimensiones de Rick and Morty con esta app ficticia de fans." />
+  <meta property="og:image" content="https://zyntra-landing-page-sigma.vercel.app/media/hero.webp" />
+  <meta property="og:image:alt" content="Icono verde de Zyntra en la pantalla de inicio de un teléfono" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preload" as="image" href="./media/hero.webp" fetchpriority="high" />
+  <!-- TermsFeed activa esta etiqueta tras aceptar la categoría de seguimiento. -->
+  <script type="text/plain" data-cookie-consent="tracking">(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
         'gtm.start':
           new Date().getTime(), event: 'gtm.js'
@@ -12,45 +24,24 @@
         j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-ND9DRF7L');</script>
-  <!-- End Google Tag Manager -->
-  <link rel="icon" type="image/x-icon" href="./src/assets/icon.png" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zyntra</title>
+  <link rel="icon" type="image/png" sizes="64x64" href="./src/assets/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;1,9..40,200;1,9..40,300&family=Outfit:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400&amp;family=Outfit:wght@500;600&amp;family=Space+Grotesk:wght@700&amp;display=optional"
+    rel="stylesheet" media="print" onload="this.media='all'" />
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND9DRF7L" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <div id="root"></div>
+  <div id="root"><!--app-html--></div>
   <script type="module" src="/src/main.tsx"></script>
 
+  <div id="cookie-preferences" class="cookie-preferences" hidden>
+    <button type="button" id="open_preferences_center">Preferencias de cookies</button>
+  </div>
+
   <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
-  <script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.2.0/cookie-consent.js"
-    charset="UTF-8"></script>
-  <script type="text/javascript" charset="UTF-8">
-    document.addEventListener('DOMContentLoaded', function () {
-      cookieconsent.run({ "notice_banner_type": "simple", "consent_type": "express", "palette": "light", "language": "es", "page_load_consent_levels": ["strictly-necessary"], "notice_banner_reject_button_hide": false, "preferences_center_close_button_hide": false, "page_refresh_confirmation_buttons": false, "website_name": "Zyntra" });
-    });
-  </script>
-
-  <noscript>Free cookie consent management tool by <a href="https://www.termsfeed.com/">TermsFeed</a></noscript>
-  <!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
-
-
-
-
-
-  <!-- Below is the link that users can use to open Preferences Center to change their preferences. Do not modify the ID parameter. Place it where appropriate, style it as needed. -->
-
-  <a href="#" id="open_preferences_center">Update cookies preferences</a>
+  <script type="module" src="/src/cookie-consent.ts"></script>
 
 </body>
 

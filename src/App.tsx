@@ -8,6 +8,7 @@ import Cta2 from './components/Cta2'
 import Faq from './components/Faq'
 import PreFooter from './components/PreFooter'
 import Footer from './components/Footer'
+import { content } from './content'
 
 /**
  * ============================================================
@@ -25,7 +26,7 @@ export default function App() {
       <Header
         action={
           // EJEMPLO: enlace a WhatsApp, Calendly, formulario externo, etc.
-          <a href="https://v2j9f.share.hsforms.com/20MHJzMYMSouGtD9-GUZ-DA" className="btn btn--primary">
+          <a href={content.contactForm} className="btn btn--primary">
             Contáctanos
           </a>
         }
@@ -35,11 +36,11 @@ export default function App() {
         <Hero
           actions={
             <>
-              <a  className="btn btn--primary" href="#contacto">
-                Iniciar Exploración
+              <a className="btn btn--primary" href="#contacto">
+                Unirme a la lista de espera
               </a>
               <a className="btn btn--secondary" href="#explicacion">
-                Ver cómo funciona
+                Ver el merch
               </a>
             </>
           }
@@ -49,7 +50,7 @@ export default function App() {
 
         {/* CTA 1 */}
         <Cta>
-          <a href = "https://v2j9f.share.hsforms.com/20MHJzMYMSouGtD9-GUZ-DA" className="btn btn--primary">
+          <a href={content.contactForm} className="btn btn--primary">
             Quiero empezar
           </a>
         </Cta>
@@ -59,7 +60,7 @@ export default function App() {
 
         {/* CTA 2 */}
         <Cta2>
-          <a href = "https://v2j9f.share.hsforms.com/20MHJzMYMSouGtD9-GUZ-DA"className="btn btn--dark">
+          <a href={content.contactForm} className="btn btn--dark">
             Solicitar información
           </a>
         </Cta2>
@@ -68,7 +69,7 @@ export default function App() {
 
         {/* Pre-footer: puedes poner un formulario, un enlace, etc. */}
         <PreFooter>
-          <a href = "https://v2j9f.share.hsforms.com/20MHJzMYMSouGtD9-GUZ-DA" className="btn btn--primary" >
+          <a href={content.contactForm} className="btn btn--primary">
             Escríbenos
           </a>
         </PreFooter>

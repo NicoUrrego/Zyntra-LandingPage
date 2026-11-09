@@ -64,6 +64,10 @@
   border: none;
   cursor: pointer;
   padding: 6px;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
 }
 
 .header__burger span {
@@ -103,13 +107,17 @@
     gap: 18px;
     padding: 24px 1.25rem 32px;
     background: var(--color-black);
+    max-height: calc(100dvh - 80px);
+    overflow-y: auto;
     transform: translateY(-12px);
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
     transition: opacity 0.25s ease, transform 0.25s ease;
   }
   .header__nav--open {
     opacity: 1;
+    visibility: visible;
     transform: translateY(0);
     pointer-events: auto;
   }

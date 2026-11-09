@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react'
 import { content } from '../content'
 import './Hero.css'
-import hero1 from '../assets/hero1.png'
 
 interface Props {
   /** Tus CTA del hero (uno o varios botones/enlaces/formulario). */
@@ -39,8 +38,10 @@ export default function Hero({ actions }: Props) {
 
         <div className="hero__media">
           <img
-            src={hero1}
-            alt="Imagen principal del hero"
+            src={hero.image}
+            alt={hero.imageAlt}
+            width={1080}
+            height={1446}
             className="hero__image"
             loading="eager"
             decoding="async"

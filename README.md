@@ -1,11 +1,27 @@
-# Landing Template (React + Vite + TypeScript)
+# Zyntra
+
+Landing page de un proyecto universitario ficticio inspirado en Rick and Morty. Está hecha con React, Vite y TypeScript.
+
+## Ejecutar en local
+
+Con Node.js instalado, abre una terminal en esta carpeta y ejecuta:
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
-- Textos e imágenes: `src/content.ts`
-- Colores y fuentes: variables en `src/index.css`
-- Tus CTA: `src/App.tsx` (Header, Hero, Cta, Cta2, PreFooter reciben tu contenido como hijos/props)
-- Cada componente tiene su CSS en `src/components/`
+Para generar y probar la versión de producción:
+
+```bash
+npm run build
+npm run preview
+```
+
+Abre la dirección que muestra Vite. La compilación se guarda en `dist/` y se sirve por HTTP.
+
+En Vercel, el comando de compilación es `npm run build` y el directorio de salida es `dist`. Este comando incluye el contenido de la landing en el HTML inicial. Si cambia la URL pública, actualízala en `index.html`, `public/robots.txt` y `public/sitemap.xml`.
+
+- Los textos, las imágenes y el enlace al formulario de HubSpot se configuran en `src/content.ts`.
+- Los colores y las fuentes se definen en `src/index.css`.
+- El consentimiento de cookies y la etiqueta de Google Tag Manager se configuran en `index.html`.

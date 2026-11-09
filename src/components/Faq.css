@@ -56,6 +56,10 @@
   transition: transform 0.3s ease;
 }
 
+.faq__question:focus-visible {
+  outline-offset: -3px;
+}
+
 .faq__item--open .faq__question i {
   transform: rotate(45deg);
 }

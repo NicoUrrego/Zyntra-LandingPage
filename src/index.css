@@ -82,7 +82,7 @@ h4 {
   font-size: 0.8rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-teal);
+  color: var(--color-blue);
   margin-bottom: 12px;
 }
 
@@ -161,4 +161,35 @@ h4 {
   font-family: var(--font-main);
   font-size: 0.95rem;
   opacity: 0.7;
+}
+
+:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
+}
+
+.cookie-preferences {
+  padding: 0 1.25rem 1.5rem;
+  background: var(--color-black);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.cookie-preferences button {
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    transition-duration: 0s !important;
+  }
 }

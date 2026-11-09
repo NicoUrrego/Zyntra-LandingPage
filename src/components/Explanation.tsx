@@ -24,9 +24,13 @@ export default function Explanation() {
                 <p>{step.text}</p>
               </div>
               <div className="explanation__media">
-                <Media src={step.image} 
-                      alt={step.title} 
-                      label={`Imagen paso ${i + 1}`} />
+                <Media
+                  src={step.image}
+                  alt={step.title}
+                  width={step.width}
+                  height={step.height}
+                  label={`Imagen paso ${i + 1}`}
+                />
               </div>
             </div>
           ))}
