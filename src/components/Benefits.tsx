@@ -1,5 +1,4 @@
 import { content } from '../content'
-import './Benefits.css'
 
 export default function Benefits() {
   const { benefits } = content

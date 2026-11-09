@@ -1,9 +1,6 @@
-import { useState } from 'react'
 import { content } from '../content'
-import './Faq.css'
 
 export default function Faq() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0)
   const { faq } = content
 
   return (
@@ -16,26 +13,15 @@ export default function Faq() {
         </div>
 
         <div className="faq__list">
-          {faq.items.map((item, i) => {
-            const isOpen = openIndex === i
-            return (
-              <div key={i} className={`faq__item ${isOpen ? 'faq__item--open' : ''}`}>
-                <button
-                  type="button"
-                  className="faq__question"
-                  onClick={() => setOpenIndex(isOpen ? null : i)}
-                  aria-expanded={isOpen}
-                  aria-controls={`respuesta-faq-${i}`}
-                >
-                  <span>{item.q}</span>
-                  <i aria-hidden="true">+</i>
-                </button>
-                <div id={`respuesta-faq-${i}`} className="faq__answer" aria-hidden={!isOpen}>
-                  <p>{item.a}</p>
-                </div>
-              </div>
-            )
-          })}
+          {faq.items.map((item, i) => (
+            <details key={item.q} className="faq__item" open={i === 0} name="zyntra-faq">
+              <summary className="faq__question">
+                <span>{item.q}</span>
+                <i aria-hidden="true">+</i>
+              </summary>
+              <p className="faq__answer">{item.a}</p>
+            </details>
+          ))}
         </div>
       </div>
     </section>

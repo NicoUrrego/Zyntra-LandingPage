@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react'
 import { content } from '../content'
-import './PreFooter.css'
 
 interface Props {
   /**

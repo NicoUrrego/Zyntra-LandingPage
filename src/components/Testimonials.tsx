@@ -1,5 +1,4 @@
 import { content } from '../content'
-import './Testimonials.css'
 
 export default function Testimonials() {
   const { testimonials } = content

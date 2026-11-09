@@ -1,34 +1,12 @@
 .hero {
   position: relative;
   overflow: hidden;
-  background: var(--color-black);
+  background:
+    radial-gradient(ellipse 380px 340px at right top, rgba(17, 157, 164, 0.24), transparent),
+    radial-gradient(ellipse 320px 260px at left bottom, rgba(25, 100, 126, 0.34), transparent),
+    var(--color-black);
   color: var(--color-white);
   padding: 170px 0 110px;
-}
-
-.hero__glow {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(120px);
-  pointer-events: none;
-}
-
-.hero__glow--1 {
-  width: 480px;
-  height: 480px;
-  background: var(--color-teal);
-  opacity: 0.35;
-  top: -120px;
-  right: -80px;
-}
-
-.hero__glow--2 {
-  width: 360px;
-  height: 360px;
-  background: var(--color-blue);
-  opacity: 0.5;
-  bottom: -140px;
-  left: -100px;
 }
 
 .hero__inner {
@@ -206,21 +184,6 @@
     object-fit: cover;
   }
 
-  .hero__glow--1 {
-    width: 280px;
-    height: 280px;
-    top: -80px;
-    right: -100px;
-    filter: blur(90px);
-  }
-
-  .hero__glow--2 {
-    width: 240px;
-    height: 240px;
-    bottom: -100px;
-    left: -100px;
-    filter: blur(90px);
-  }
 }
 
 /* =========================

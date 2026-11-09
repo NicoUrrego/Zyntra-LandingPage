@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react'
 import { content } from '../content'
-import './Hero.css'
 
 interface Props {
   /** Tus CTA del hero (uno o varios botones/enlaces/formulario). */
@@ -12,9 +11,6 @@ export default function Hero({ actions }: Props) {
 
   return (
     <section id="inicio" className="hero">
-      <div className="hero__glow hero__glow--1" aria-hidden="true" />
-      <div className="hero__glow hero__glow--2" aria-hidden="true" />
-
       <div className="container hero__inner">
         <div className="hero__content">
           {hero.badge && (
@@ -44,7 +40,6 @@ export default function Hero({ actions }: Props) {
             height={1446}
             className="hero__image"
             loading="eager"
-            decoding="async"
           />
         </div>
       </div>

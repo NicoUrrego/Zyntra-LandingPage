@@ -1,6 +1,5 @@
 import { content } from '../content'
 import Media from './Placeholder'
-import './Explanation.css'
 
 export default function Explanation() {
 

@@ -1,5 +1,4 @@
 import { content } from '../content'
-import './Footer.css'
 
 export default function Footer() {
   const { brand, footer } = content

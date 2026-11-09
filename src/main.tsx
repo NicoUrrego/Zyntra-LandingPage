@@ -1,17 +1,12 @@
-import { StrictMode } from 'react'
-import { createRoot, hydrateRoot } from 'react-dom/client'
 import './index.css'
-import App from './App'
+import './components/styles.css'
+import { enhanceNavigation } from './navigation'
 
-const root = document.getElementById('root')!
-const app = (
-  <StrictMode>
-    <App />
-  </StrictMode>
-)
-
-if (root.firstElementChild) {
-  hydrateRoot(root, app)
+if (import.meta.env.DEV) {
+  void import('./dev').then(({ render }) => {
+    render()
+    enhanceNavigation()
+  })
 } else {
-  createRoot(root).render(app)
+  enhanceNavigation()
 }

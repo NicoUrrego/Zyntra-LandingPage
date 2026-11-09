@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react'
 import { content } from '../content'
-import './Cta2.css'
 
 interface Props {
   /**
